@@ -175,14 +175,6 @@ class VideoPlayerApp(QWidget):
         result = model_cls.predict(img)
         return result[0]
 
-    # def detect_person_stream(self):
-    #     results = model.predict(self.video_file, classes=0, conf=0.6, device=0, stream=True)
-    #     for result in results:
-    #         self.next_frame = result.plot()
-    #         self.display_frame()
-
-            # print(0)
-
     def select_file(self):
         self.video_file, _ = QFileDialog.getOpenFileName(self, 'Выбрать видеофайл', '', 'Video Files (*.mp4 *.avi *.mkv)')
         self.toggle_play()  # При выборе файла автоматически запускаем воспроизведение
